@@ -13,13 +13,9 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
-		'view' => [
-			'theme' => [
-				'pathMap' => [
-					'@app/views' => '@backend/theme'
-				],
-			],
-		],
+        'request' => [
+            'csrfParam' => '_csrf-backend',
+        ],
 		'assetManager' => [
 			'bundles' => [
 				'dmstr\web\AdminLteAsset' => [
@@ -27,9 +23,14 @@ return [
 				],
 			],
 		],
-        'request' => [
-            'csrfParam' => '_csrf-backend',
-        ],
+		'view' => [
+			'theme' => [
+				'pathMap' => [
+					'@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/phundament/app'
+				],
+			],
+		],
+
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
