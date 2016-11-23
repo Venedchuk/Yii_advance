@@ -70,7 +70,10 @@ AppAsset::register($this);
 				'value' => date('d-M-Y', strtotime('+2 days')),
 				'options' => ['placeholder' => 'Select issue date ...'],
 				'pluginOptions' => [
+					'dateFormat' => 'yyyy-MM-dd',
 					'format' => 'dd-M-yyyy',
+					'startView'=> 2,
+					'autoclose'=>true,
 					'todayHighlight' => true
 				]
 			]);
