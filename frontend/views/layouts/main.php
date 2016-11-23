@@ -78,6 +78,9 @@ AppAsset::register($this);
 				]
 			]);
 		?>
+
+<!--			<button id="send">Send</button>-->
+
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>

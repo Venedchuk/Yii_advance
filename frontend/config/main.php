@@ -7,7 +7,7 @@ $params = array_merge(
 );
 
 return [
-	'homeUrl'=>'/admin',
+	'homeUrl'=>'/',
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
