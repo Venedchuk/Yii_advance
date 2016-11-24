@@ -16,6 +16,7 @@ class DatesController extends Controller
 {
     /**
      * @inheritdoc
+	 *
      */
     public function behaviors()
     {
@@ -122,5 +123,3 @@ class DatesController extends Controller
         }
     }
 }
-
-
