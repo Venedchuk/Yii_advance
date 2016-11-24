@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "dates".
@@ -10,7 +11,7 @@ use Yii;
  * @property integer $id
  * @property string $dates
  */
-class Dates extends \yii\db\ActiveRecord
+class Dates extends ActiveRecord
 {
     /**
      * @inheritdoc

@@ -3,13 +3,17 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+	/* @var $this yii\web\View */
+	/* @var $searchModel app\models\DatesSearch */
+	/* @var $dataProvider yii\data\ActiveDataProvider */
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
-	use kartik\widgets\DatePicker;
+
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -60,26 +64,7 @@ AppAsset::register($this);
     ?>
 
     <div class="container">
-		<?php
 
-
-			// usage without model
-			echo '<label>Check Issue Date</label>';
-			echo DatePicker::widget([
-				'name' => 'check_issue_date',
-				'value' => date('d-M-Y', strtotime('+2 days')),
-				'options' => ['placeholder' => 'Select issue date ...'],
-				'pluginOptions' => [
-					'dateFormat' => 'yyyy-MM-dd',
-					'format' => 'dd-M-yyyy',
-					'startView'=> 2,
-					'autoclose'=>true,
-					'todayHighlight' => true
-				]
-			]);
-		?>
-
-<!--			<button id="send">Send</button>-->
 
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

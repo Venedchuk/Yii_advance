@@ -18,7 +18,8 @@ class DatesSearch extends Dates
     public function rules()
     {
         return [
-            [['id'], 'integer',['dates'], 'safe']
+            [['id'], 'integer'],
+            [['dates'], 'safe'],
         ];
     }
 
@@ -59,6 +60,7 @@ class DatesSearch extends Dates
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'dates' => $this->dates,
         ]);
 
         return $dataProvider;
